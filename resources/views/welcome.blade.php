@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Creative - Start Bootstrap Theme</title>
+    <meta name="author" content="TLX" />
+    <title>TLX - PT. DOKUMEN PAKET EKSPRES</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/favicon.png') }}" />
     <!-- Bootstrap Icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Google fonts-->
@@ -24,24 +24,27 @@
         integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
-    <link href="{{asset('css/new.css')}}" rel="stylesheet" />
+    <link href="{{asset('assets/css/styles.css')}}" rel="stylesheet" />
+    <link href="{{asset('assets/css/new.css')}}" rel="stylesheet" />
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#page-top">Logo</a>
+            <a class="navbar-brand" href="#page-top"><img src="{{ asset('assets/img/tlx_logo.png') }}" style="width: 30%"></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Cek Resi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Cek Ongkir</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Agen</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Pengajuan Klaim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
                 </ul>
             </div>
         </div>
@@ -54,71 +57,72 @@
 
         <!-- The HTML5 video element that will create the background video on the header -->
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+            <source src="{{ asset('assets/files/video/compro.mp4') }}" type="video/mp4">
         </video>
 
         <!-- The header content -->
         <div class="container h-100">
             <div class="d-flex h-100 text-center align-items-center">
                 <div class="w-100 text-white">
-                    <h1 class="display-3">Halo</h1>
-                    <p class="lead mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, a.</p>
+                    {{-- <h1 class="display-3">Halo</h1>
+                    <p class="lead mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, a.</p> --}}
                 </div>
             </div>
         </div>
     </header>
 
 
-    <!-- About-->
-    <div class="timeline mx-auto my-5">
+    <!-- Tracking -->
+    <div class="container px-4 px-lg-5">
+        <div class="timeline mx-auto my-5">
+            <div class="entry">
+                <div class="title">
+                    <p>Senin</p>
+                    <h6>22 May 2022</h6>
+                </div>
+                <div class="body">
+                    <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
 
-        <div class="entry">
-            <div class="title">
-                <p>Senin</p>
-                <h6>22 May 2022</h6>
+                </div>
             </div>
-            <div class="body">
-                <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
+            <div class="entry">
+                <div class="title">
+                </div>
+                <div class="body">
+                    <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
 
+                </div>
+            </div>
+            <div class="entry">
+                <div class="title">
+                    <p>Selasa</p>
+                    <h6>23 May 2022</h6>
+                </div>
+                <div class="body">
+                    <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
+
+                </div>
+            </div>
+            <div class="entry">
+                <div class="title">
+                </div>
+                <div class="body">
+                    <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
+
+                </div>
+            </div>
+            <div class="entry">
+                <div class="title">
+                </div>
+                <div class="body">
+                    <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
+
+                </div>
             </div>
         </div>
-        <div class="entry">
-            <div class="title">
-            </div>
-            <div class="body">
-                <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-
-            </div>
-        </div>
-        <div class="entry">
-            <div class="title">
-                <p>Selasa</p>
-                <h6>23 May 2022</h6>
-            </div>
-            <div class="body">
-                <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-
-            </div>
-        </div>
-        <div class="entry">
-            <div class="title">
-            </div>
-            <div class="body">
-                <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-
-            </div>
-        </div>
-        <div class="entry">
-            <div class="title">
-            </div>
-            <div class="body">
-                <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-
-            </div>
-        </div>
-
-
     </div>
+    
+
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -130,31 +134,31 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img style="height: 75vh"
-                    src="https://t4.ftcdn.net/jpg/03/01/04/65/360_F_301046542_kFqDN0ECspByQHJQjpbzPjDx5btUnayO.jpg"
+                <img
+                    src="{{ asset('assets/files/banner/1.jpg') }}"
                     class="d-block w-100" alt="...">
-                <div class="carousel-caption">
+                {{-- <div class="carousel-caption">
                     <h5>First slide label</h5>
                     <p>Some representative placeholder content for the first slide.</p>
-                </div>
+                </div> --}}
             </div>
             <div class="carousel-item">
-                <img style="height: 75vh"
-                    src="https://i.pinimg.com/originals/9f/c2/5b/9fc25b1219200a94d4f090cc87318387.jpg"
+                <img
+                    src="{{ asset('assets/files/banner/2.jpg') }}"
                     class="d-block w-100" alt="...">
-                <div class="carousel-caption">
+                {{-- <div class="carousel-caption">
                     <h5>Second slide label</h5>
                     <p>Some representative placeholder content for the second slide.</p>
-                </div>
+                </div> --}}
             </div>
             <div class="carousel-item">
-                <img style="height: 75vh"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfK8Hf6YVNvxahTBBuiExttZqcz3zaKdvElymyNiH0AErjZllSirZmteptu-aeMds1gQ&usqp=CAU"
+                <img
+                    src="{{ asset('assets/files/banner/3.jpg') }}"
                     class="d-block w-100" alt="...">
-                <div class="carousel-caption">
+                {{-- <div class="carousel-caption">
                     <h5>Third slide label</h5>
                     <p>Some representative placeholder content for the third slide.</p>
-                </div>
+                </div> --}}
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
@@ -168,36 +172,38 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+
+
     <section class="page-section bg-light" id="services">
         <div class="container px-4 px-lg-5">
-            <h2 class="text-center mt-0">News</h2>
+            <h2 class="text-center mt-0">Mengapa Memilih TLX</h2>
             <hr class="divider" />
             <div class="news-slider">
                 <div class="text-center rounded bg-white mx-3 py-5">
                     <div class="mt-2">
                         <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Sturdy Themes</h3>
+                        <h3 class="h4 mb-2">Safe and Reliable</h3>
                         <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
                     </div>
                 </div>
                 <div class="text-center rounded bg-white mx-3 py-5">
                     <div class="mt-2">
                         <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Up to Date</h3>
+                        <h3 class="h4 mb-2">Closer To You</h3>
                         <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
                     </div>
                 </div>
                 <div class="text-center rounded bg-white mx-3 py-5">
                     <div class="mt-2">
                         <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Ready to Publish</h3>
+                        <h3 class="h4 mb-2">Worldwide Connected</h3>
                         <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
                     </div>
                 </div>
                 <div class="text-center rounded bg-white mx-3 py-5">
                     <div class="mt-2">
                         <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Made with Love</h3>
+                        <h3 class="h4 mb-2">Smile... Your Package is Guaranteed</h3>
                         <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
                     </div>
                 </div>
@@ -205,11 +211,43 @@
         </div>
     </section>
     <!-- Portfolio-->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8171679117722!2d107.5723156508684!3d-6.912451794980864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e797205cb175%3A0xd2176da4fcb21033!2sTLX%20(KIRIM%20PAKET%20KE%20LUAR%20NEGERI)!5e0!3m2!1sen!2sid!4v1612328872682!5m2!1sen!2sid" width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     <!-- Footer-->
     <footer class="bg-light py-5">
-        <div class="container px-4 px-lg-5">
-            <div class="small text-center text-muted">Copyright &copy; 2021 - Lorem Ipsum</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info">
+                        <h4 style="color: #000000; font-family: titillium-semi"><strong>TENTANG KAMI</strong></h4>
+                        <p class="text-justify" style="color: #000000; font-size:16px; font-family: titillium-semi">
+                            Memulai bisnis sejak 2010, kami sebagai penyedia jasa kurir internasional yang handal, menjamin pengiriman anda akan sampai di negara tujuan dengan baik karena kami memiliki relasi dengan partner-partner dari dalam maupun luar negeri.
+                        </p><br>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info">
+                        <h4 style="color: #000000; font-family: titillium-semi"><strong>KANTOR PUSAT</strong></h4>
+                        <p class="text-left" style="color: #000000; font-size:16px; font-family: titillium-semi">
+                            JL. RAJAWALI BARAT NO. 89, BANDUNG 40184, INDONESIA
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            <hr style="border: 1px solid white;">
         </div>
+        <center>
+            <div class="copyright" style="font-size:22px; color: #000000;">
+                <strong>
+                    Copyright ©
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script> PT. DOKUMEN PAKET EKSPRES
+                </strong>
+            </div>
+        </center>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -221,12 +259,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
         integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="{{asset('js/scripts.js')}}"></script>
+    <script src="{{asset('assets/js/scripts.js')}}"></script>
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <!-- * *                               SB Forms JS                               * *-->
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
     <script>
         $(document).ready(function(){
         $('.news-slider').slick({
