@@ -51,7 +51,6 @@
     </nav>
     <!-- Masthead-->
     <header>
-
         <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
         <div class="overlay"></div>
 
