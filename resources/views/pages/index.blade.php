@@ -66,13 +66,13 @@
                         </div>
                     </div>
                 </section>
-                <div class="title">
+                {{-- <div class="title">
                     <p>Senin</p>
                     <h6>22 May 2022</h6>
                 </div>
                 <div class="body">
                     <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-                </div>
+                </div> --}}
             </div>
             {{-- <div class="entry">
                 <div class="title">
