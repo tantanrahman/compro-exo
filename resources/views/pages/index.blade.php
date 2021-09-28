@@ -70,10 +70,9 @@
                     <p>Senin</p>
                     <h6>22 May 2022</h6>
                 </div> --}}
-                @php
-                    $getData = '';
-                @endphp
+                
                 @foreach ($getData ?: [] as $data)
+                    
                     <div class="body">
                         {{ $data->status_eng }}
                     </div>

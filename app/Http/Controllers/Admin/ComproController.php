@@ -2,22 +2,22 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Models\Prim;
-use App\Models\Shipment;
-use App\Models\Tracking;
+use App\Models\Compro;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redis;
 
-class PrimController extends Controller
+class ComproController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        
+        //
     }
 
     /**
@@ -44,10 +44,10 @@ class PrimController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Prim  $prim
+     * @param  \App\Models\Compro  $compro
      * @return \Illuminate\Http\Response
      */
-    public function show(Prim $prim)
+    public function show(Compro $compro)
     {
         //
     }
@@ -55,10 +55,10 @@ class PrimController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Prim  $prim
+     * @param  \App\Models\Compro  $compro
      * @return \Illuminate\Http\Response
      */
-    public function edit(Prim $prim)
+    public function edit(Compro $compro)
     {
         //
     }
@@ -67,10 +67,10 @@ class PrimController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Prim  $prim
+     * @param  \App\Models\Compro  $compro
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Prim $prim)
+    public function update(Request $request, Compro $compro)
     {
         //
     }
@@ -78,36 +78,30 @@ class PrimController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Prim  $prim
+     * @param  \App\Models\Compro  $compro
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Prim $prim)
+    public function destroy(Compro $compro)
     {
         //
     }
 
     /**
      * @author Tantan
-     * @description Search Connote in Compro
-     * @created 16 Sep 2021
+     * @description Search Tracking
+     * @created 7 Sep 2021
      */
-    public function checkAwb(Request $request, Shipment $shipment)
+    public function searchTracking(Request $request)
     {
-        $search     = $request->searching;
+        //Get Data Searching from View
+        $search     = $request->search;
+        dd($request);
 
-        $getData    = Tracking::join('shipment','tracking_shipment.shipment_id','=','shipment.id')
-                        ->select('tracking_shipment.status_eng AS status_eng')
-                        ->where('shipment.connote','=', $search)
-                        ->get();
+        //Got Data from Database According Tracking
+        $tracking   = DB::table('tracking_shipment')
+                    ->where('status_eng','like','%'.$search.'%')
+                    ->get();
 
-        if ($getData)
-        {
-            return view('pages.index', compact('getData'));
-        }
-        else 
-        {
-            return "Gagal";
-        }
-        
+        return view('welcome', compact('tracking'));
     }
 }
