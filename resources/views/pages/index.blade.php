@@ -48,7 +48,6 @@
         </div>
     </header>
 
-
     <!-- Tracking -->
     <div class="container px-4 px-lg-5">
         <div class="timeline mx-auto my-5">
@@ -66,13 +65,19 @@
                         </div>
                     </div>
                 </section>
+
                 {{-- <div class="title">
                     <p>Senin</p>
                     <h6>22 May 2022</h6>
-                </div>
-                <div class="body">
-                    <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
                 </div> --}}
+                @php
+                    $getData = '';
+                @endphp
+                @foreach ($getData ?: [] as $data)
+                    <div class="body">
+                        {{ $data->status_eng }}
+                    </div>
+                @endforeach
             </div>
             {{-- <div class="entry">
                 <div class="title">

@@ -15,9 +15,23 @@ class PrimController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $search     = $request->searching;
+
+        $getData    = Tracking::join('shipment','tracking_shipment.shipment_id','=','shipment.id')
+                        ->select('tracking_shipment.status_eng AS status_eng')
+                        ->where('shipment.connote','=', $search)
+                        ->first();
+
+        if ($getData)
+        {
+            return view('pages.index', compact('getData'));
+        }
+        else 
+        {
+            return "Gagal";
+        }
     }
 
     /**
@@ -93,11 +107,7 @@ class PrimController extends Controller
      */
     public function checkAwb(Request $request, Shipment $shipment)
     {
-        $search     = $request->searching;
-
-        $getData    = Tracking::getAwb($search);
-
-        return view('pages.index', compact($getData));
+       
         
     }
 }
