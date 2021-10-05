@@ -21,4 +21,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('checkAwb', [App\Http\Controllers\Admin\PrimController::class, 'checkAwb'])->name('checkAwb');
+Route::get('/checkAwb', [App\Http\Controllers\Admin\PrimController::class, 'checkAwb'])->name('checkAwb');

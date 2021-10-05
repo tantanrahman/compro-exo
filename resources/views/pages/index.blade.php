@@ -11,17 +11,24 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link" href="#about">Beranda</a></li>
-                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link" href="#services">Cek Resi</a>
+                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link"
+                            href="#about">Beranda</a></li>
+                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link"
+                            href="#services">Cek Resi</a>
                     </li>
-                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link" href="#services">Cek
+                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link"
+                            href="#services">Cek
                             Ongkir</a></li>
-                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link" href="#services">Agen</a></li>
-                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link" href="#portfolio">Tentang
+                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link"
+                            href="#services">Agen</a></li>
+                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link"
+                            href="#portfolio">Tentang
                             Kami</a></li>
-                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link" href="#services">Pengajuan
+                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link"
+                            href="#services">Pengajuan
                             Klaim</a></li>
-                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link" href="#contact">Kontak</a>
+                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link"
+                            href="#contact">Kontak</a>
                     </li>
                 </ul>
             </div>
@@ -48,66 +55,26 @@
         </div>
     </header>
 
+    <section class="bg-white" style="border-radius: 10%; background: rgba(255, 255, 255, 0.9);box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+                border-radius: 20px; font-family:titillium-semi;">
+        <div class="text-center">
+            <div class="py-5" style="margin: 4%">
+                <form action="{{ route('checkAwb') }}" method="GET">
+                    <h3 class="h4 mb-2" style="font-family: gotham;">Pengirimanmu Aman, Cari Posisinya</h3>
+                    <p class="text-muted mb-0">Masukkan NOMOR RESI atau AWB atau KODE BOOKING</p>
+                    <input type="text" id="searching" name="searching" style="text-align: center;" class="form-control"
+                        placeholder="622xxxxxxxxx">
+                    <button type="submit" id="search-btn" class="btn btn-info mt-2">SEARCH</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- Tracking -->
     <div class="container px-4 px-lg-5">
         <div class="timeline mx-auto my-5">
-            <div class="entry">
-                <section class="bg-white" style="border-radius: 10%; background: rgba(255, 255, 255, 0.9);box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
-            border-radius: 20px; font-family:titillium-semi;">
-                    <div class="text-center">
-                        <div class="py-5" style="margin: 4%">
-                            <form action="{{ route('checkAwb') }}" method="GET">
-                                <h3 class="h4 mb-2" style="font-family: gotham;">Pengirimanmu Aman, Cari Posisinya</h3>
-                                <p class="text-muted mb-0">Masukkan NOMOR RESI atau AWB atau KODE BOOKING</p>
-                                <input type="text" name="searching" style="text-align: center;" class="form-control" placeholder="622xxxxxxxxx">
-                                <button type="submit" class="btn btn-info mt-2">SEARCH</button>
-                            </form>
-                        </div>
-                    </div>
-                </section>
 
-                {{-- <div class="title">
-                    <p>Senin</p>
-                    <h6>22 May 2022</h6>
-                </div> --}}
-                
-                @foreach ($getData ?: [] as $data)
-                    
-                    <div class="body">
-                        {{ $data->status_eng }}
-                    </div>
-                @endforeach
-            </div>
-            {{-- <div class="entry">
-                <div class="title">
-                </div>
-                <div class="body">
-                    <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.
-                    </p>
-
-                </div>
-            </div>
-            <div class="entry">
-                <div class="title">
-                    <p>Selasa</p>
-                    <h6>23 May 2022</h6>
-                </div>
-                <div class="body">
-                    <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.
-                    </p>
-
-                </div>
-            </div>
-            <div class="entry">
-                <div class="title">
-                </div>
-                <div class="body">
-                    <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.
-                    </p>
-
-                </div>
-            </div>
-            <div class="entry">
+            {{-- {{-- <div class="entry">
                 <div class="title">
                 </div>
                 <div class="body">
@@ -116,6 +83,36 @@
 
                 </div>
             </div> --}}
+
+            {{-- <div class="entry">
+            <div class="title">
+                <p>Selasa</p>
+                <h6>23 May 2022</h6>
+            </div>
+            <div class="body">
+                <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.
+                </p>
+
+            </div>
+        </div> --}}
+            {{-- <div class="entry">
+            <div class="title">
+            </div>
+            <div class="body">
+                <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.
+                </p>
+
+            </div>
+        </div>
+        <div class="entry">
+            <div class="title">
+            </div>
+            <div class="body">
+                <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.
+                </p>
+
+            </div>
+        </div> --}}
         </div>
     </div>
 
@@ -203,8 +200,7 @@
     <!-- Portfolio-->
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8171679117722!2d107.5723156508684!3d-6.912451794980864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e797205cb175%3A0xd2176da4fcb21033!2sTLX%20(KIRIM%20PAKET%20KE%20LUAR%20NEGERI)!5e0!3m2!1sen!2sid!4v1612328872682!5m2!1sen!2sid"
-        width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-        tabindex="0">
+        width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
     </iframe>
     <!-- Footer-->
     <footer class="bg-light py-5">
@@ -245,5 +241,38 @@
             </div>
         </center>
     </footer>
-    
-    
+
+    @push('script')
+    <script>
+        let day = [
+            'Senin','Selasa','Rabu','Kamis','Jumat','Sabtu','Minggu'
+        ]
+
+        let month = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember']
+
+        $('#search-btn').on('click',function(e){
+            e.preventDefault()
+            let data = $('#searching').val()
+            console.log(data)
+            $.get('http://localhost:8000/getTrackChoir/'+data,function(data){
+                $('.entry').remove()
+                console.log(JSON.parse(data).datachoir)
+                JSON.parse(data).datachoir.forEach(z=>{
+                    $('.timeline').append(`<div class="entry">
+                        <div class="title">
+                            <p>${day[new Date(z.shipment_date).getDay()]}</p>
+                            <h6>${new Date(z.shipment_date).getDate()} ${month[new Date(z.shipment_date).getMonth()]} ${new Date(z.shipment_date).getFullYear()}</h6>
+                        </div>
+                        <div class="body">
+                            <p>${z.notes}
+                            </p>
+                    
+                        </div>
+                    </div>`)
+                })
+
+                
+            })
+        })
+    </script>
+    @endpush
