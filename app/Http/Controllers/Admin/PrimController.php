@@ -93,12 +93,16 @@ class PrimController extends Controller
     public function checkAwb(Request $request, Shipment $shipment)
     {
 
-        // $search     = $request->searching;
+        $search     = $request->searching;
 
-        // $getData    = Tracking::join('shipment', 'tracking_shipment.shipment_id', '=', 'shipment.id')
-        //     ->select('tracking_shipment.status_eng AS status_eng')
-        //     ->where('shipment.connote', '=', $search)
-        //     ->get();
+        $getData    = Tracking::join('shipment', 'tracking_shipment.shipment_id', '=', 'shipment.id')
+            ->select('tracking_shipment.status_eng AS status_eng')
+            ->where('shipment.connote', '=', $search)
+            ->get();
+
+        return response($getData);
+
+        // dd($getData);
 
         // if ($getData) {
         //     return view('pages.index', compact('getData'));
