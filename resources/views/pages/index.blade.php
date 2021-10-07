@@ -124,30 +124,30 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#page-top"><img src="{{ asset('assets/img/tlx_logo.png') }}"
-                    style="width: 100px;"></a>
+            <a class="navbar-brand" href="#page-top"><img src="{{ asset('assets/img/favicon2.png') }}"
+                    style="width: 50px;"></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link"
+                    <li style="white-space: nowrap; font-family:gotham;" class="nav-item"><a class="nav-link"
                             href="#about">Beranda</a></li>
-                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link"
+                    <li style="white-space: nowrap; font-family:gotham;" class="nav-item"><a class="nav-link"
                             href="#services">Cek Resi</a>
                     </li>
-                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link"
+                    <li style="white-space: nowrap; font-family:gotham;" class="nav-item"><a class="nav-link"
                             href="#services">Cek
                             Ongkir</a></li>
-                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link"
+                    <li style="white-space: nowrap; font-family:gotham;" class="nav-item"><a class="nav-link"
                             href="#services">Agen</a></li>
-                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link"
+                    <li style="white-space: nowrap; font-family:gotham;" class="nav-item"><a class="nav-link"
                             href="#portfolio">Tentang
                             Kami</a></li>
-                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link"
+                    <li style="white-space: nowrap; font-family:gotham;" class="nav-item"><a class="nav-link"
                             href="#services">Pengajuan
                             Klaim</a></li>
-                    <li style="white-space: nowrap; font-family:titillium-semi;" class="nav-item"><a class="nav-link"
+                    <li style="white-space: nowrap; font-family:gotham;" class="nav-item"><a class="nav-link"
                             href="#contact">Kontak</a>
                     </li>
                 </ul>
@@ -384,7 +384,7 @@
     @push('script')
     <script>
         let day = [
-            'Senin','Selasa','Rabu','Kamis','Jumat','Sabtu','Minggu'
+            'Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'
         ]
 
         let month = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember']
@@ -394,15 +394,17 @@
             $("#search-text").hide()
             $('#loading').show()
             let searching = $('#searching').val()
-            console.log(searching)
-            $.get('http://localhost:8000/getTrackChoir/'+searching,function(data){
+            $.get('http://eos-tlx.local/getTrackChoir/'+searching,function(data){
                 $('.entry').remove()
                 if(JSON.parse(data).datachoir == undefined){
-                    console.log('undefinedddd ' + searching)
                     $.get("/api/checkawb?searching="+searching,function(val){
                         val.forEach(e=>{
                             $('.timeline').append(`<div class="entry">
-                               
+                                <div class="title">
+                                    <p>${day[new Date(e.tracktime).getDay()]}</p>
+                                    <h6>${new Date(e.tracktime).getDate()} ${month[new Date(e.tracktime).getMonth()]} ${new
+                                Date(e.tracktime).getFullYear()}</h6>
+                                </div>
                                 <div class="body">
                                     <p>${e.status_eng}
                                     </p>
@@ -411,12 +413,6 @@
                             </div>`)
                         })
                     })
-                    // $.get("/api/checkawb?searching="searching,function(val){
-                    //     console.log(val)
-                    // })
-                        // $.get("/api/checkawb?searching="searching,function(val){
-                        //     console.log(val)
-                        // })
                 }else{
                     JSON.parse(data).datachoir.forEach(z=>{
                     $('.timeline').append(`<div class="entry">
@@ -432,11 +428,10 @@
                         </div>
                     </div>`)
                     })
-                }
+                }  
                 
-                
-$("#search-text").show()
-$('#loading').hide()
+            $("#search-text").show()
+            $('#loading').hide()
                 
             })
         })

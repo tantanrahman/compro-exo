@@ -19,7 +19,7 @@ class Tracking extends Model
     public static function getAwb($id)
     {
         $items      = self::join('shipment','tracking_shipment.shipment_id','=','shipment.id')
-                        ->select('tracking_shipment.status_eng AS awb_eng')
+                        ->select('tracking_shipment.status_eng AS awb_eng','tracking_shipment.track_time AS tracktime')
                         ->where('shipment.connote',$id);
 
         return $items->first($id);

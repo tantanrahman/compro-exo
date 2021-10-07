@@ -11735,10 +11735,10 @@ hr.divider-light {
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover,
 #mainNav .navbar-nav .nav-item .nav-link:active {
-    color: #f4623a;
+    color: #008BD0;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-    color: #f4623a !important;
+    color: #008BD0 !important;
 }
 #mainNav.navbar-shrink {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -11748,13 +11748,13 @@ hr.divider-light {
     color: #212529;
 }
 #mainNav.navbar-shrink .navbar-brand:hover {
-    color: #f4623a;
+    color: #008BD0;
 }
 #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
     color: #212529;
 }
 #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
-    color: #f4623a;
+    color: #008BD0;
 }
 @media (min-width: 992px) {
     #mainNav {
@@ -11926,4 +11926,8 @@ header.masthead .h1 {
 #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption,
 #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
     opacity: 1;
+}
+
+.nav-text > li.active > a.blue {
+  background-color: #104c66 !important;
 }

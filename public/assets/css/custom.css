@@ -7,3 +7,7 @@
     font-family: gotham;
     src: url('../font/gotham.otf');
 }
+
+.nav-link a:hover {
+    border-bottom: 3px solid red !important;
+}

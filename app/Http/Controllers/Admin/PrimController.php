@@ -96,8 +96,10 @@ class PrimController extends Controller
         $search     = $request->searching;
 
         $getData    = Tracking::join('shipment', 'tracking_shipment.shipment_id', '=', 'shipment.id')
-            ->select('tracking_shipment.status_eng AS status_eng')
+            ->select('tracking_shipment.status_eng AS status_eng','tracking_shipment.track_time AS tracktime')
             ->where('shipment.connote', '=', $search)
+            ->orWhere('shipment.redoc_connote', '=', $search)
+            ->orderBy('track_time','DESC')
             ->get();
 
         return response($getData);
