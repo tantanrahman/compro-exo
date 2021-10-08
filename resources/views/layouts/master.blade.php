@@ -1,4 +1,5 @@
 @include('includes.style')
+@include('includes.loading')
 
 @include('includes.script')
-@stack('script')
+@include('includes.script_tracking')
