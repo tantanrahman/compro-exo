@@ -127,5 +127,5 @@ header .overlay {
 }
 .slick-next:before,
 .slick-prev:before {
-    color: red !important;
+    color: #008BD0 !important;
 }

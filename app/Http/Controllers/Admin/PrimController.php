@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Prim;
+use App\Models\Ongkir;
 use App\Models\Shipment;
 use App\Models\Tracking;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PrimController extends Controller
 {
@@ -17,6 +18,11 @@ class PrimController extends Controller
      */
     public function index(Request $request)
     {
+        $ongkir = Ongkir::get_items();
+
+        dd($ongkir);
+
+        return view('pages.index', compact('ongkir'));
     }
 
     /**

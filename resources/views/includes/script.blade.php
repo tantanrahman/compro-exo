@@ -1,4 +1,4 @@
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -48,6 +48,33 @@
         // instead of a settings object
         ]
         });
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        //Blink for Style
+        function JavaBlink() 
+        {
+            var blinks = document.getElementsByTagName('JavaBlink');
+            for (var i = blinks.length - 1; i >= 0; i--) {
+                var s = blinks[i];
+                s.style.visibility = (s.style.visibility === 'visible') ? 'hidden' : 'visible';
+            }
+            window.setTimeout(JavaBlink, 1000);
+        }
+        if (document.addEventListener) document.addEventListener("DOMContentLoaded", JavaBlink, false);
+        else if (window.addEventListener) window.addEventListener("load", JavaBlink, false);
+        else if (window.attachEvent) window.attachEvent("onload", JavaBlink);
+        else window.onload = JavaBlink;
+        
+        // Time Picker
+        $(document).ready(function () {
+            $('#datetimepicker3').datetimepicker({
+                format: 'HH:mm'
+            });
         });
     </script>
 </body>

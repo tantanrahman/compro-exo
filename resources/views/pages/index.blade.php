@@ -11,7 +11,7 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                    <li style="white-space: nowrap; font-family:gotham;" class="nav-item"><a class="nav-link"
+                    <li style="white-space: nowrap;" class="nav-item"><a class="nav-link"
                             href="#about">Beranda</a></li>
                     <li style="white-space: nowrap; font-family:gotham;" class="nav-item"><a class="nav-link"
                             href="#services">Cek Resi</a>
@@ -40,9 +40,9 @@
         <div class="overlay"></div>
 
         <!-- The HTML5 video element that will create the background video on the header -->
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        {{-- <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
             <source src="{{ asset('assets/files/video/compro.mp4') }}" type="video/mp4">
-        </video>
+        </video> --}}
 
         <!-- The header content -->
         <div class="container h-100">
@@ -54,8 +54,24 @@
             </div>
         </div>
     </header>
+    
+    {{-- <section class="bg-white" style="border-radius: 20%; background: rgba(235, 235, 237, 0.9);box-shadow: 20px 10px 10px 10px rgba(0, 0, 0, 0.1);border-radius: 20px; font-family:gotham; width:50%; margin:auto;">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <select class="form-control" name="ongkir" id="status_eng">
+                        <option value="" selected disabled>Ongkir</option>
+                            @foreach($ongkir as $item)
+                                <option value="{{ $item->country_id }}">{{ $item->countries }}</option>
+                            @endforeach
 
-    <section class="bg-white" style="border-radius: 20%; background: rgba(255, 255, 255, 0.9);box-shadow: 40px 20px 20px 20px rgba(0, 0, 0, 0.1);border-radius: 20px; font-family:gotham;">
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section> --}}
+
+    <section class="bg-white" style="border-radius: 20%; background: rgba(235, 235, 237, 0.9);box-shadow: 20px 10px 10px 10px rgba(0, 0, 0, 0.1);border-radius: 20px; font-family:gotham; width:50%; margin:auto;">
         <div class="text-center">
             <div class="py-5" style="margin: 4%">
 
@@ -180,13 +196,15 @@
     </div>
 
     <section class="page-section bg-light" id="services">
-        <div class="container px-4 px-lg-5">
-            <h2 class="text-center mt-0" style="font-family: gotham;">Mengapa Memilih TLX</h2>
+        <div class="container px-4 px-lg-5" data-aos="zoom-in">
+            <h2 class="text-center mt-0" style="font-family: gotham;">Mengapa <font style="color: #008BD0"><b>Memilih TLX</b></h2></font>
             <hr class="divider" />
             <div class="news-slider" style="font-family: gotham;">
                 <div class="text-center rounded bg-white mx-3 py-5">
                     <div class="mt-2">
-                        <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
+                        <figure class="col-md-2">
+                              <img alt="picture" src="{{  asset('assets/img/services/aman.png') }}" class="rounded mx-auto d-block" style="width=40%">
+                        </figure>
                         <h3 class="h4 mb-2" style="font-family: gotham;">Safe and Reliable</h3>
                         <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
                     </div>
@@ -215,19 +233,20 @@
             </div>
         </div>
     </section>
+
     <!-- Portfolio-->
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8171679117722!2d107.5723156508684!3d-6.912451794980864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e797205cb175%3A0xd2176da4fcb21033!2sTLX%20(KIRIM%20PAKET%20KE%20LUAR%20NEGERI)!5e0!3m2!1sen!2sid!4v1612328872682!5m2!1sen!2sid"
         width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
     </iframe>
     <!-- Footer-->
-    <footer class="bg-light py-5">
+    <footer class="py-5" style="background-color: #008BD0">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <div class="info">
-                        <h4 style="color: #000000; font-family: titillium-semi"><strong>TENTANG KAMI</strong></h4>
-                        <p class="text-justify" style="color: #000000; font-size:16px; font-family: titillium-semi">
+                        <h4 style="color: #fff; font-family: gotham"><strong>TENTANG KAMI</strong></h4>
+                        <p class="text-justify" style="color: #fff; font-size:16px; font-family: gotham">
                             Memulai bisnis sejak 2010, kami sebagai penyedia jasa kurir internasional yang handal,
                             menjamin pengiriman anda akan sampai di negara tujuan dengan baik karena kami memiliki
                             relasi dengan partner-partner dari dalam maupun luar negeri.
@@ -236,8 +255,8 @@
                 </div>
                 <div class="col-md-6">
                     <div class="info">
-                        <h4 style="color: #000000; font-family: titillium-semi"><strong>KANTOR PUSAT</strong></h4>
-                        <p class="text-left" style="color: #000000; font-size:16px; font-family: titillium-semi">
+                        <h4 style="color: #fff; font-family: gotham"><strong>KANTOR PUSAT</strong></h4>
+                        <p class="text-left" style="color: #fff; font-size:16px; font-family: gotham">
                             JL. RAJAWALI BARAT NO. 89, BANDUNG 40184, INDONESIA
                         </p>
                     </div>
@@ -249,7 +268,7 @@
             <hr style="border: 1px solid white;">
         </div>
         <center>
-            <div class="copyright" style="font-size:22px; color: #000000; font-family: titillium-semi;">
+            <div class="copyright" style="font-size:22px; color: #fff; font-family: gotham;">
                 <strong>
                     Copyright ©
                     <script>

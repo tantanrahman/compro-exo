@@ -10,18 +10,18 @@
         $("#search-text").hide()
         $('#loading').show()
         let searching = $('#searching').val()
-        $.get('http://eos-tlx.test/getTrackChoir/'+searching,function(data){
+        $.get('http://eos-tlx.local/getTrackChoir/'+searching,function(data){
             $('.entry').remove()
             if(JSON.parse(data).datachoir == undefined){
                 $.get("/api/checkawb?searching="+searching,function(val){
                     val.forEach(e=>{
                         $('.timeline').append(`<div class="entry">
-                            <div class="title">
-                                <p>${day[new Date(e.tracktime).getDay()]}</p>
-                                <h6>${new Date(e.tracktime).getDate()} ${month[new Date(e.tracktime).getMonth()]} ${new
+                            <div class="title" style="font-family: gotham;">
+                                <p style="font-family: gotham;">${day[new Date(e.tracktime).getDay()]}</p>
+                                <h6 style="font-family: gotham;">${new Date(e.tracktime).getDate()} ${month[new Date(e.tracktime).getMonth()]} ${new
                             Date(e.tracktime).getFullYear()}</h6>
                             </div>
-                            <div class="body">
+                            <div class="body" style="font-family: gotham;">
                                 <p>${e.status_eng}
                                 </p>
                         
