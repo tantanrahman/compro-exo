@@ -55,17 +55,16 @@
         </div>
     </header>
 
-    <section class="bg-white" style="border-radius: 10%; background: rgba(255, 255, 255, 0.9);box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
-                border-radius: 20px; font-family:titillium-semi;">
+    <section class="bg-white" style="border-radius: 20%; background: rgba(255, 255, 255, 0.9);box-shadow: 40px 20px 20px 20px rgba(0, 0, 0, 0.1);border-radius: 20px; font-family:gotham;">
         <div class="text-center">
             <div class="py-5" style="margin: 4%">
 
-                <h3 class="h4 mb-2" style="font-family: gotham;">Pengirimanmu Aman, Cari Posisinya</h3>
-                <p class="text-muted mb-0">Masukkan NOMOR RESI atau AWB atau KODE BOOKING</p>
-                <input type="text" id="searching" name="searching" style="text-align: center;" class="form-control"
+                <h3 class="h4 mb-2" style="font-family: gotham;">Cek Resi</h3>
+                <p class="text-muted mb-0" style="font-family: gotham;">Lacak status pengiriman barang.</p>
+                <input type="text" id="searching" name="searching" style="text-align: center; font-family: gotham;" class="form-control"
                     placeholder="622xxxxxxxxx">
                 <button type="submit" id="search-btn" class="btn btn-info mt-2">
-                    <div id="search-text">SEARCH</div>
+                    <div id="search-text" style="font-family: gotham;">SEARCH</div>
                     <div id="loading" style="display: none" class="loadingio-spinner-spinner-og8ww2g8awq">
                         <div class="ldio-70zupg3by86">
                             <div></div>
@@ -182,34 +181,34 @@
 
     <section class="page-section bg-light" id="services">
         <div class="container px-4 px-lg-5">
-            <h2 class="text-center mt-0">Mengapa Memilih TLX</h2>
+            <h2 class="text-center mt-0" style="font-family: gotham;">Mengapa Memilih TLX</h2>
             <hr class="divider" />
-            <div class="news-slider">
+            <div class="news-slider" style="font-family: gotham;">
                 <div class="text-center rounded bg-white mx-3 py-5">
                     <div class="mt-2">
                         <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Safe and Reliable</h3>
+                        <h3 class="h4 mb-2" style="font-family: gotham;">Safe and Reliable</h3>
                         <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
                     </div>
                 </div>
                 <div class="text-center rounded bg-white mx-3 py-5">
                     <div class="mt-2">
                         <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Closer To You</h3>
+                        <h3 class="h4 mb-2" style="font-family: gotham;">Closer To You</h3>
                         <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
                     </div>
                 </div>
                 <div class="text-center rounded bg-white mx-3 py-5">
                     <div class="mt-2">
                         <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Worldwide Connected</h3>
+                        <h3 class="h4 mb-2" style="font-family: gotham;">Worldwide Connected</h3>
                         <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
                     </div>
                 </div>
                 <div class="text-center rounded bg-white mx-3 py-5">
                     <div class="mt-2">
                         <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Smile... Your Package is Guaranteed</h3>
+                        <h3 class="h4 mb-2" style="font-family: gotham;">Smile... Your Package is Guaranteed</h3>
                         <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
                     </div>
                 </div>
