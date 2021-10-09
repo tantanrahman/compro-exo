@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ComproController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/checkawb', [App\Http\Controllers\Admin\PrimController::class, 'checkAwb'])->name('checkAwb');
+Route::get('/ongkir', [ComproController::class, 'cek_ongkir']);

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('pages.index');
+    $country = DB::table('country')->get();
+    $package = DB::table('packagetype')->get();
+    return view('pages.index', compact('country', 'package'));
 });
 
 Auth::routes();

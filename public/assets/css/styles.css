@@ -8230,6 +8230,8 @@ fieldset:disabled .btn {
 
 .bg-white {
     --bs-bg-opacity: 1;
+    height: 100%;
+    border-radius: 100px;
     background-color: rgba(
         var(--bs-white-rgb),
         var(--bs-bg-opacity)

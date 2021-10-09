@@ -6,6 +6,7 @@ use App\Models\Compro;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\Ongkir;
 use Illuminate\Support\Facades\Redis;
 
 class ComproController extends Controller
@@ -88,20 +89,12 @@ class ComproController extends Controller
 
     /**
      * @author Tantan
-     * @description Search Tracking
-     * @created 7 Sep 2021
+     * @description Cek Ongkir on Display
+     * @param Request $request
+     * @created 9 Okt 2021
      */
-    public function searchTracking(Request $request)
+    public function cek_ongkir(Request $request)
     {
-        //Get Data Searching from View
-        $search     = $request->search;
-        dd($request);
-
-        //Got Data from Database According Tracking
-        $tracking   = DB::table('tracking_shipment')
-                    ->where('status_eng','like','%'.$search.'%')
-                    ->get();
-
-        return view('welcome', compact('tracking'));
+        return response(Ongkir::cek_ongkir($request));
     }
 }
