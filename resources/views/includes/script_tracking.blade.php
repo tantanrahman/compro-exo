@@ -10,7 +10,7 @@
         $("#search-text").hide()
         $('#loading').show()
         let searching = $('#searching').val()
-        $.get('http://eos-tlx.local/getTrackChoir/'+searching,function(data){
+        $.get('https://eos.tlx.co.id/getTrackChoir/'+searching,function(data){
             $('.entry').remove()
             if(JSON.parse(data).datachoir == undefined){
                 $.get("/api/checkawb?searching="+searching,function(val){

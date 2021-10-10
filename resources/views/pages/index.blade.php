@@ -182,9 +182,9 @@
             <div class="overlay"></div>
 
             <!-- The HTML5 video element that will create the background video on the header -->
-            {{-- <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
                 <source src="{{ asset('assets/files/video/compro.mp4') }}" type="video/mp4">
-            </video> --}}
+            </video>
 
             <!-- The header content -->
             <div class="container h-100">
@@ -564,7 +564,7 @@
                 $("#search-text").hide()
                 $('#loading').show()
                 let searching = $('#searching').val()
-                $.get('http://eos-tlx.local/getTrackChoir/'+searching,function(data){
+                $.get('https://eos.tlx.co.id/getTrackChoir/'+searching,function(data){
                     $('.entry').remove()
                     if(JSON.parse(data).datachoir == undefined){
                         $.get("/api/checkawb?searching="+searching,function(val){

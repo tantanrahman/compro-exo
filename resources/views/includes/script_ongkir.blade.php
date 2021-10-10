@@ -6,7 +6,7 @@
         $('#check-loading').show()
         let country = $('#country').val()
         let package = $('#package').val()
-        $.get('http://localhost:8000/api/ongkir?country='+country+'&packagetype='+package,function(data){
+        $.get('https://tlx.co.id/api/ongkir?country='+country+'&packagetype='+package,function(data){
             if(data){
                 $("#ongkir-id").append("Rp. " + data.prices)
             }else{
