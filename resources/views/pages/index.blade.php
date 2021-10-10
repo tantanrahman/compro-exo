@@ -168,7 +168,7 @@
                                 href="#cek-resi">Cek Resi</a>
                         </li>
                         <li style="white-space: nowrap; font-family:gotham;" class="nav-item"><a class="nav-link"
-                                href="#services">Cek Ongkir</a></li>
+                                href="#cek-ongkir">Cek Ongkir</a></li>
                         <li style="white-space: nowrap; font-family:gotham;" class="nav-item"><a class="nav-link"
                                 href="#contact">Kontak</a>
                         </li>
@@ -247,7 +247,7 @@
             </div>
         </section>
 
-        <section style="box-shadow: 0 2px 12px 2px gray; width:75%; margin: auto; border-radius: 10px;" data-aos="zoom-in" id="cek-resi">
+        <section style="box-shadow: 0 2px 12px 2px gray; width:75%; margin: auto; border-radius: 10px;" data-aos="zoom-in" id="cek-ongkir">
             <div class="text-center">
                 <div class="py-5" style="margin: 4%">
 
