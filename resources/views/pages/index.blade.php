@@ -213,40 +213,6 @@
             </div>
         </section> --}}
 
-
-        <section style="box-shadow: 0 2px 12px 2px gray; width:75%; margin: auto; border-radius: 10px;" data-aos="zoom-in" id="cek-resi">
-            <div class="text-center">
-                <div class="py-5" style="margin: 4%">
-
-                    <h3 class="h4 mb-2" style="font-family: gotham;">Cek Resi</h3>
-                    <p class="text-muted mb-0" style="font-family: gotham;">Lacak status pengiriman barang.</p>
-                    <input type="text" id="searching" name="searching" style="text-align: center; font-family: gotham;" class="form-control"
-                        placeholder="622xxxxxxxxx">
-                    <button type="submit" id="search-btn" class="btn btn-info mt-2">
-                        <div id="search-text" style="font-family: gotham;">SEARCH</div>
-                        <div id="loading" style="display: none" class="loadingio-spinner-spinner-og8ww2g8awq">
-                            <div class="ldio-70zupg3by86">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                        </div>
-
-                    </button>
-
-                </div>
-            </div>
-        </section>
-
         <section style="box-shadow: 0 2px 12px 2px gray; width:75%; margin: auto; border-radius: 10px;" data-aos="zoom-in" id="cek-ongkir">
             <div class="text-center">
                 <div class="py-5" style="margin: 4%">
@@ -298,6 +264,40 @@
                     </button>
 
                     <p class="mt-5" id="ongkir-id"></p>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section style="box-shadow: 0 2px 12px 2px gray; width:75%; margin: auto; border-radius: 10px;" data-aos="zoom-in" id="cek-resi">
+            <div class="text-center">
+                <div class="py-5" style="margin: 4%">
+
+                    <h3 class="h4 mb-2" style="font-family: gotham;">Cek Resi</h3>
+                    <p class="text-muted mb-0" style="font-family: gotham;">Lacak status pengiriman barang.</p>
+                    <input type="text" id="searching" name="searching" style="text-align: center; font-family: gotham;" class="form-control"
+                        placeholder="622xxxxxxxxx">
+                    <button type="submit" id="search-btn" class="btn btn-info mt-2">
+                        <div id="search-text" style="font-family: gotham;">SEARCH</div>
+                        <div id="loading" style="display: none" class="loadingio-spinner-spinner-og8ww2g8awq">
+                            <div class="ldio-70zupg3by86">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                    </button>
 
                 </div>
             </div>
