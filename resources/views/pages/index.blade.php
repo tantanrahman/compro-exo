@@ -159,6 +159,16 @@
                 box-shadow: 0 20px 20px -20px #000;
                 }
         </style>
+        <!-- Global site tag (gtag.js) - Google Ads: 720134773 -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-720134773"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-720134773');
+        </script>
+        
     </head>
 
     <body id="page-top">
@@ -619,6 +629,16 @@
                     
                 })
             })
+        </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149961795-1">
+        </script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-149961795-1');
         </script>
     </body>
 
